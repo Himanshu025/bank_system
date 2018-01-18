@@ -1,0 +1,13 @@
+<table class="table">
+  <tr>
+    <th>Account_no</th>
+    <th>Avail_Bal</th>
+  </tr>
+  <tr>
+    <td><%= account.number %></td>
+    <td><%= account.balance %></td>
+    <td><%= link_to 'Show' , account_path(account) , class:"btn btn-md btn-primary"%></td>
+		<td><%= link_to 'Edit', edit_account_path(account) , class:"btn btn-md btn-success"%></td>
+		<td><%= link_to 'Destroy', account, method: :delete , class:"btn btn-md btn-danger"%></td>
+	 </tr>
+</table>

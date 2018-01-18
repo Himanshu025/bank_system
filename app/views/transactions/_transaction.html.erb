@@ -1,0 +1,14 @@
+<table class="table">
+  <tr>
+    <th>transaction_no</th>
+    <th>transaction_type</th>
+    <th>amount</th>
+  </tr>
+  <tr>
+    <td><%= transaction.number %></td>
+    <td><%= transaction.category %></td>
+    <td><%= transaction.amount %></td>
+    <td><%= link_to 'Show' , transaction_path(transaction) ,class:"btn btn-md btn btn-info"%></td>
+  </tr>
+</table>
+

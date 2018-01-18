@@ -1,0 +1,22 @@
+<div class="jumbotron" >
+	<p>
+		<strong>account_no:</strong>
+		<%= @account.number %>
+	</p> 
+	<p>
+		<strong>available_balance:</strong>
+		<%= @account.balance %>
+	</p>
+	<p>
+	  <%= link_to 'Edit', edit_account_path(@account) ,class:"btn btn-md btn btn-success" %>
+	  <%= link_to 'Destroy', account_path(@account),method: :delete,data: { confirm: 'Are you sure?'} ,class:"btn btn-md btn btn-danger"%>
+	</p>		
+	<h3>Transactions History</h3>
+	<%= render @account.transactions %>
+	<h3>Do a transaction</h3>
+	<%= render 'transactions/form' %>
+	<h3>Loan History</h3>
+	<%= render @account.loans %>
+	<%= link_to 'Manage Loan', new_loan_path(:account => @account.id) ,class:"btn btn-md btn btn-primary" %>
+	<%= link_to 'Back', user_path(@account.user_id) ,class:"btn btn-md btn btn-primary" %>
+</div>

@@ -1,0 +1,13 @@
+<div class="jumbotron">
+	<p>
+		<strong>locker_section:</strong>
+		<%= @locker.section %>
+	</p> 
+	<p>
+		<strong>locker_no:</strong>
+		<%= @locker.number %>
+	</p>
+	<%= link_to 'Edit', edit_locker_path(@locker) , class:"btn btn-md btn-success"%>
+	<%= link_to 'Destroy', locker_path(@locker),method: :delete,data: { confirm: 'Are you sure?' } , class:"btn btn-md btn-danger"%>
+	<%= link_to 'Back', lockers_path , class:"btn btn-md btn-primary" %>
+</div>

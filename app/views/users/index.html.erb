@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h3><%= link_to 'Manage Lockers', lockers_path , class:"btn btn-md btn-success"%></h3>
+  <div align="center">
+    <h2>Listing users</h2>
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Phone_no</th>
+        <th>Email</th>
+        <th>Aadhar_no</th>
+      </tr>
+      <h3><%= link_to 'New User', new_user_path , class:"btn btn-md btn-info" %></h3>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.phone_no %></td>
+          <td><%= user.email %></td>
+          <td><%= user.aadhar_no %></td>
+          <td><%= link_to 'Details', user_path(user) , class:"btn btn-md btn-primary"%></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

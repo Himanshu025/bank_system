@@ -1,0 +1,20 @@
+<div class="jumbotron">
+  <h3><%= link_to 'Users', users_path , class:"btn btn-md btn-success"%></h3>
+  <div align="center">
+    <h2>Listing Lockers</h2>
+    <table class="table">
+      <tr>
+        <th>locker_section</th>
+        <th>locker_no</th>
+      </tr>
+      <h3><%= link_to 'New Locker', new_locker_path , class:"btn btn-md btn-info" %></h3>
+      <% @lockers.each do |locker| %>
+      <tr>
+        <td><%= locker.section %></td>
+        <td><%= locker.number %></td>
+        <td><%= link_to 'Show', locker_path(locker), class:"btn btn-md btn-primary" %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

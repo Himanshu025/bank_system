@@ -1,0 +1,21 @@
+<%= form_for @account.transactions.build, class:"form-group", local: true do |form| %>
+  <%= notice %>
+  <p>
+  	<%= form.label :transaction_no %><br>
+  	<%= form.text_field :number ,class:"form-control" , required: true%>
+  </p>
+  <p>
+  	<%= form.label :transaction_type %><br>
+  	<%= form.text_area :category ,class:"form-control" , required: true %>
+  </p>
+  <p>
+  	<%= form.label :amount %><br>
+  	<%= form.text_area :amount ,class:"form-control" ,required: true%>
+  </p>
+  <p>
+    <%= form.hidden_field :account_id, :value => @account.id %>
+  </p>
+	<p>
+		<%= form.submit :Save ,class:"btn btn-md btn btn-success" %>
+	</p>
+<% end %>

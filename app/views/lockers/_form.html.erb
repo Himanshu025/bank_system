@@ -1,0 +1,26 @@
+<%= form_for @locker, class:"form-group" ,local: true do |form| %>
+  <%= notice %>
+  <% if @locker.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@locker.errors.count, "error") %> prohibited this locker from being saved:
+      </h2>
+      <ul>
+        <% @locker.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= form.label :locker_section %><br>
+    <%= form.text_field :section ,class:"form-control"%>
+  </p>
+  <p>
+    <%= form.label :locker_no %><br>
+    <%= form.text_area :number ,class:"form-control" %>
+  </p>
+  <p>
+    <%= form.submit :update, class:"btn btn-md btn-success" %>
+  </p>
+<% end %>

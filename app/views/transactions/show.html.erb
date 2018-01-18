@@ -1,0 +1,15 @@
+<div class="jumbotron">
+  <p>
+    <strong>trans_no:</strong>
+    <%= @transaction.number %>
+  </p> 
+  <p>
+    <strong>trans_type:</strong>
+    <%= @transaction.category %>
+  </p>
+  <p>
+    <strong>amount:</strong>
+    <%= @transaction.amount %>
+  </p>
+  <%= link_to 'Back', account_path(@transaction.account_id) ,class:"btn btn-md btn btn-primary" %>
+</div>

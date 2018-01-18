@@ -1,0 +1,21 @@
+<%= form_for @user.accounts.build, class:"form-group" , local: true do |form| %>
+  <%= notice %>
+  <p>
+	  <%= form.label :account_number %><br>
+	  <%= form.text_field :number ,class:"form-control", required: true %>
+  </p>
+  <p>
+	  <%= form.label :balance %><br>
+	  <%= form.text_area :balance ,class:"form-control" , required: true%>
+  </p>
+  <p>
+	  <%= form.label :"Locker ID" %><br>
+	  <%= form.text_area :locker_id ,class:"form-control" , required: true%>
+  </p>
+  </p>
+    <%= form.hidden_field :user_id, :value => @user.id %>
+  <p>
+	<p>
+		<%= form.submit :Save , class:"btn btn-md btn btn-success" %>
+	</p>
+<% end %>

@@ -1,0 +1,27 @@
+<div class="jumbotron" >
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p> 
+  <p>
+    <strong>Phone_no:</strong>
+    <%= @user.phone_no %>
+  </p>
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+  <p>
+    <strong>Aadhar_no:</strong>
+    <%= @user.aadhar_no %>
+  </p>
+  <p>
+    <%= link_to 'Edit', edit_user_path(@user) , class:"btn btn-md btn btn-success"%>
+    <%= link_to 'Destroy', user_path(@user),method: :delete,data: { confirm: 'Are you sure?' } , class:"btn btn-md btn btn-danger" %>
+  </p>
+  <h3>Accounts</h3>
+  <%= render @user.accounts %>
+  <h3>Add a account:</h3>
+  <%= render 'accounts/form' %>
+  <%= link_to 'Back', users_path ,class:"btn btn-md btn btn-primary" %>
+</div>

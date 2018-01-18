@@ -1,0 +1,25 @@
+<div class="jumbotron">
+	<h2>Edit Account</h2> 
+	<%= form_for @account,class:"form-group" ,local: true do |form| %>
+  <%= notice %>
+	  <p>
+	  	<%= form.label :account_no %><br>
+	  	<%= form.text_field :number ,class:"form-control" %>
+  	</p>
+  	<p>
+	  	<%= form.label :available_balance %><br>
+	  	<%= form.text_area :balance ,class:"form-control" %>
+  	</p>
+  	<p>
+  		<%= form.label :locker_id %><br>
+  		<%= form.text_area :locker_id ,class:"form-control"%>
+  	</p>
+  	<p>
+  		<%= form.hidden_field :user_id, :value => @account.user.id %>
+  	</p>
+  	<p>
+  		<%= form.submit :Update ,class:"btn btn-md btn btn-success" %>
+  	</p>
+	<% end %>
+	<%= link_to 'Back', user_path(@account.user_id) ,class:"btn btn-md btn btn-primary" %>
+</div>

@@ -1,0 +1,16 @@
+<table class="table">
+  <tr>
+    <th>Loan_type</th>
+    <th>Amount</th>
+    <th>No of Years</th>
+  </tr>
+  <tr>
+    <td><%= loan.category %></td>
+    <td><%= loan.amount %></td>
+    <td><%= loan.no_of_years %></td>
+    <td><%= link_to 'Show' , loan_path(loan) ,class:"btn btn-md btn btn-info" %></td>
+    <td><%= link_to 'Edit', edit_loan_path(loan) ,class:"btn btn-md btn btn-success" %></td>
+    <td><%= link_to 'Destroy', loan, method: :delete ,class:"btn btn-md btn btn-danger"%></td>
+  </tr>
+</table>
+

@@ -1,0 +1,15 @@
+<div class="jumbotron">
+	<p>
+		<strong>loan_type:</strong>
+		<%= @loan.category %>
+	</p> 
+	<p>
+		<strong>amount:</strong>
+		<%= @loan.amount %>
+	</p>
+	<p>
+		<strong>no_of_years:</strong>
+		<%= @loan.no_of_years %>
+	</p>
+	<%= link_to 'Back', account_path(@loan.account_id) ,class:"btn btn-md btn btn-primary" %>
+</div>
